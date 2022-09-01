@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" initial-scale=1.0">
+    <title>RealTime JS | PrasadChavan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+         *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(113, 113, 249);
+    color: black;
+}
+body .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    padding: 12px 20px;
+    border-radius: 7px;
+}
+.container .box{
+    border-bottom: 1px solid rgb(113, 113, 249);
+    padding: 12px 12px;
+    margin-bottom: 10px;
+}
+.container .box h2{
+    font-size: 45px;
+}
+.container .box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5px;
+}
+.container .box2 h2{
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+.container .box2 p{
+    font-size: 21px;
+    letter-spacing: 1.5px;
+}                                                                                      
+    </style>
+                                                                                               
+   <script>
+       
+let timetag = document.getElementById('time'),
+ datetag = document.getElementById('date');
+
+
+ setInterval(() => {
+    let date = new Date();
+    datetag.innerText = date.toDateString();
+    let timeStr = date.getHours() +' : '+date.getMinutes()+' : '+date.getSeconds();
+    timetag.innerHTML = timeStr;
+ }, 1000);
+                                                                                        
+   </script>                                                                                      
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box">
+            <h2>Clock In JavaScript</h2>
+        </div>
+        <div class="box2">
+            <h2 id="time"></h2>
+            <p id="date"></p>
+        </div>
+    </div>
+</body>
+</html>
