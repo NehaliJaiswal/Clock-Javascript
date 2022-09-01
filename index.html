@@ -56,21 +56,7 @@ body .container{
     letter-spacing: 1.5px;
 }                                                                                      
     </style>
-                                                                                               
-   <script>
-       
-let timetag = document.getElementById('time'),
- datetag = document.getElementById('date');
-
-
- setInterval(() => {
-    let date = new Date();
-    datetag.innerText = date.toDateString();
-    let timeStr = date.getHours() +' : '+date.getMinutes()+' : '+date.getSeconds();
-    timetag.innerHTML = timeStr;
- }, 1000);
-                                                                                        
-   </script>                                                                                      
+                                                                                                                                                                                   
 </head>
 <body>
     
@@ -83,5 +69,19 @@ let timetag = document.getElementById('time'),
             <p id="date"></p>
         </div>
     </div>
+      <script>
+       
+let timetag = document.getElementById('time'),
+ datetag = document.getElementById('date');
+
+
+ setInterval(() => {
+    let date = new Date();
+    datetag.innerText = date.toDateString();
+    let timeStr = date.getHours() +' : '+date.getMinutes()+' : '+date.getSeconds();
+    timetag.innerHTML = timeStr;
+ }, 1000);
+                                                                                        
+   </script> 
 </body>
 </html>
